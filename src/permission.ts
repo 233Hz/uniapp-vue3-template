@@ -10,7 +10,7 @@ router.beforeEach((to, from, next) => {
     next({
       name: 'login',
       params: { redirect: to.name!, ...to.query },
-      navType: 'replaceAll',
+      navType: 'replaceAll'
     })
   } else if (to && to.name === 'login' && authStore.hasToken()) {
     next({ name: 'home', navType: 'replaceAll' })

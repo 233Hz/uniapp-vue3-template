@@ -23,7 +23,7 @@ export const useUserStore = defineStore(
       userInfo,
       setUserInfo,
       clearUserInfo,
-      hasRole,
+      hasRole
     }
   },
   {
@@ -36,8 +36,8 @@ export const useUserStore = defineStore(
         },
         getItem(key) {
           return uni.getStorageSync(key)
-        },
-      },
-    },
-  },
+        }
+      }
+    }
+  }
 )

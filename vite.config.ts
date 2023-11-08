@@ -11,8 +11,8 @@ export default defineConfig(({ mode }) => {
     resolve: {
       // 配置别名
       alias: {
-        '@': path.resolve(__dirname, 'src'),
-      },
+        '@': path.resolve(__dirname, 'src')
+      }
     },
     esbuild: {
       // 生产环境去除打印与debugger
@@ -25,9 +25,9 @@ export default defineConfig(({ mode }) => {
         '/mock': {
           target: '/',
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/mock/, ''),
-        },
-      },
-    },
+          rewrite: (path) => path.replace(/^\/mock/, '')
+        }
+      }
+    }
   }
 })

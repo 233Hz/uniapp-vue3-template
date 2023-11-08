@@ -10,6 +10,6 @@ export function createApp() {
   app.use(pinia)
   app.use(router)
   return {
-    app,
+    app
   }
 }

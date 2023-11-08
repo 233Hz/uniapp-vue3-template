@@ -9,7 +9,7 @@ import pagesJsonToRoutes from 'uni-parse-pages'
 const routes = pagesJsonToRoutes(pagesJson)
 
 const router = createRouter({
-  routes: [...routes], // 路由表信息
+  routes: [...routes] // 路由表信息
 })
 
 export default router

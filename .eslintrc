@@ -36,6 +36,12 @@
     "vue/no-multiple-template-root": "off",
     "vue/multi-word-component-names": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/ban-ts-comment": "off"
+    "@typescript-eslint/ban-ts-comment": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "none" // 禁止末尾逗号
+      }
+    ]
   }
 }

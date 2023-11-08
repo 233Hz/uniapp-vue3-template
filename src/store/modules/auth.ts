@@ -17,7 +17,7 @@ export const useAuthStore = defineStore(
       token,
       setToken,
       clearToken,
-      hasToken,
+      hasToken
     }
   },
   {
@@ -30,8 +30,8 @@ export const useAuthStore = defineStore(
         },
         getItem(key) {
           return uni.getStorageSync(key)
-        },
-      },
-    },
-  },
+        }
+      }
+    }
+  }
 )

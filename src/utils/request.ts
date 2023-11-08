@@ -14,14 +14,14 @@ const httpInterceptor = {
     // 添加小程序端请求表头
     options.header = {
       ...options.header,
-      'source-client': 'miniapp',
+      'source-client': 'miniapp'
     }
     const userStore = useUserStore()
     const token = userStore.token
     if (userStore.hasToken()) {
       options.header.Authorization = token
     }
-  },
+  }
 }
 uni.addInterceptor('request', httpInterceptor)
 uni.addInterceptor('uploadFile', httpInterceptor)
@@ -33,7 +33,7 @@ interface RequestResult<T> {
 }
 
 export const request = <T>(
-  options: UniApp.RequestOptions,
+  options: UniApp.RequestOptions
 ): Promise<RequestResult<T>> => {
   return new Promise((resolve, reject) => {
     uni.request({
@@ -48,13 +48,13 @@ export const request = <T>(
           userStore.clearToken()
           uni.navigateTo({
             url: '/pages/login/login',
-            reLaunch: true,
+            reLaunch: true
           })
           reject(res)
         } else {
           uni.showToast({
             title: (res.data as RequestResult<T>).msg || '请求失败',
-            icon: 'none',
+            icon: 'none'
           })
           reject(res)
         }
@@ -64,10 +64,10 @@ export const request = <T>(
       fail(err) {
         uni.showToast({
           title: '网络错误，请稍后重试',
-          icon: 'none',
+          icon: 'none'
         })
         reject(err)
-      },
+      }
     })
   })
 }

@@ -6,16 +6,20 @@
     <view>
       <text>测试pinia</text>
     </view>
-    <text
-      >测试字体图标
-      <text style="margin-left: 20rpx; color: pink" class="icon-sousuo"
-    /></text>
+    <text>
+      测试字体图标
+      <text style="margin-left: 20rpx; color: pink" class="icon-sousuo" />
+    </text>
     <text class="test-scss">测试scss</text>
   </view>
 </template>
 
 <script setup lang="ts">
 import Test from './components/Test.vue'
+const a = {
+  a: 1
+}
+console.log(a)
 </script>
 
 <style lang="scss">
