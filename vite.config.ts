@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => {
     },
     esbuild: {
       // 生产环境去除打印与debugger
-      drop: ['console', 'debugger'],
+      // drop: ['console', 'debugger'],
     },
     server: {
       host: '0.0.0.0',

@@ -1,18 +1,29 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
+export interface UserInfo {
+  username: string
+  roles: string[]
+}
+
 export const useUserStore = defineStore(
   'user',
   () => {
-    const token = ref<string | undefined>(void 0)
-    const setToken = (value: string) => (token.value = value)
-    const clearToken = () => (token.value = void 0)
-    const hasToken = () => !!token.value
+    const userInfo = ref<UserInfo>()
+    const setUserInfo = (_userInfo: UserInfo) => {
+      userInfo.value = _userInfo
+    }
+    const clearUserInfo = () => {
+      userInfo.value = void 0
+    }
+    const hasRole = (role: string) => {
+      return userInfo.value && userInfo.value.roles.includes(role)
+    }
     return {
-      token,
-      setToken,
-      clearToken,
-      hasToken,
+      userInfo,
+      setUserInfo,
+      clearUserInfo,
+      hasRole,
     }
   },
   {

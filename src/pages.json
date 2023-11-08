@@ -11,9 +11,54 @@
   "pages": [
     //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
     {
-      "path": "pages/index/index",
+      "path": "pages/login/index",
+      "name": "login",
       "style": {
-        "navigationBarTitleText": "uni-app"
+        "navigationBarTitleText": "登录"
+      },
+      "meta": {
+        "ignoreAuth": true
+      }
+    },
+    {
+      "path": "pages/index/index",
+      "name": "home",
+      "style": {
+        "navigationBarTitleText": "首页"
+      },
+      "meta": {
+        "ignoreAuth": false
+      }
+    },
+    {
+      "path": "pages/test/index",
+      "name": "test",
+      "style": {
+        "navigationBarTitleText": "测试"
+      },
+      "meta": {
+        "ignoreAuth": false,
+        "roles": ["admin"]
+      }
+    },
+    {
+      "path": "pages/my/index",
+      "name": "my",
+      "style": {
+        "navigationBarTitleText": "我的"
+      },
+      "meta": {
+        "ignoreAuth": false
+      }
+    },
+    {
+      "path": "pages/error/404",
+      "name": "404",
+      "style": {
+        "navigationBarTitleText": "404"
+      },
+      "meta": {
+        "ignoreAuth": true
       }
     }
   ],
@@ -22,5 +67,21 @@
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#303133",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的"
+      }
+    ]
   }
 }

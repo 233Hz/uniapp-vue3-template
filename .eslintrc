@@ -4,6 +4,20 @@
     "es2021": true,
     "node": true
   },
+  // 小程序全局变量
+  "globals": {
+    "uni": true,
+    "wx": true,
+    "WechatMiniprogram": true,
+    "getCurrentPages": true,
+    "getApp": true,
+    "UniApp": true,
+    "UniHelper": true,
+    "App": true,
+    "Page": true,
+    "Component": true,
+    "AnyObject": true
+  },
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -20,6 +34,8 @@
   "plugins": ["@typescript-eslint", "vue"],
   "rules": {
     "vue/no-multiple-template-root": "off",
-    "vue/multi-word-component-names": "off"
+    "vue/multi-word-component-names": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-ts-comment": "off"
   }
 }

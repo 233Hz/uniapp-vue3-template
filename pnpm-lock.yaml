@@ -48,11 +48,17 @@ dependencies:
     specifier: ^1.4.28
     version: registry.npmmirror.com/@dcloudio/uni-ui@1.4.28
   pinia:
-    specifier: ^2.1.7
-    version: registry.npmmirror.com/pinia@2.1.7(typescript@4.9.5)(vue@3.3.8)
+    specifier: ^2.0.36
+    version: registry.npmmirror.com/pinia@2.0.36(typescript@4.9.5)(vue@3.3.8)
   pinia-plugin-persistedstate:
     specifier: ^3.2.0
-    version: registry.npmmirror.com/pinia-plugin-persistedstate@3.2.0(pinia@2.1.7)
+    version: registry.npmmirror.com/pinia-plugin-persistedstate@3.2.0(pinia@2.0.36)
+  uni-mini-router:
+    specifier: ^0.1.5
+    version: registry.npmmirror.com/uni-mini-router@0.1.5
+  uni-parse-pages:
+    specifier: ^0.0.1
+    version: registry.npmmirror.com/uni-parse-pages@0.0.1
   vue:
     specifier: ^3.3.8
     version: registry.npmmirror.com/vue@3.3.8(typescript@4.9.5)
@@ -9163,7 +9169,7 @@ packages:
     version: 2.3.0
     engines: {node: '>=0.10.0'}
 
-  registry.npmmirror.com/pinia-plugin-persistedstate@3.2.0(pinia@2.1.7):
+  registry.npmmirror.com/pinia-plugin-persistedstate@3.2.0(pinia@2.0.36):
     resolution: {integrity: sha512-tZbNGf2vjAQcIm7alK40sE51Qu/m9oWr+rEgNm/2AWr1huFxj72CjvpQcIQzMknDBJEkQznCLAGtJTIcLKrKdw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/pinia-plugin-persistedstate/-/pinia-plugin-persistedstate-3.2.0.tgz}
     id: registry.npmmirror.com/pinia-plugin-persistedstate/3.2.0
     name: pinia-plugin-persistedstate
@@ -9171,18 +9177,18 @@ packages:
     peerDependencies:
       pinia: ^2.0.0
     dependencies:
-      pinia: registry.npmmirror.com/pinia@2.1.7(typescript@4.9.5)(vue@3.3.8)
+      pinia: registry.npmmirror.com/pinia@2.0.36(typescript@4.9.5)(vue@3.3.8)
     dev: false
 
-  registry.npmmirror.com/pinia@2.1.7(typescript@4.9.5)(vue@3.3.8):
-    resolution: {integrity: sha512-+C2AHFtcFqjPih0zpYuvof37SFxMQ7OEG2zV9jRI12i9BOy3YQVAHwdKtyyc8pDcDyIc33WCIsZaCFWU7WWxGQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/pinia/-/pinia-2.1.7.tgz}
-    id: registry.npmmirror.com/pinia/2.1.7
+  registry.npmmirror.com/pinia@2.0.36(typescript@4.9.5)(vue@3.3.8):
+    resolution: {integrity: sha512-4UKApwjlmJH+VuHKgA+zQMddcCb3ezYnyewQ9NVrsDqZ/j9dMv5+rh+1r48whKNdpFkZAWVxhBp5ewYaYX9JcQ==, tarball: https://registry.npmmirror.com/pinia/-/pinia-2.0.36.tgz}
+    id: registry.npmmirror.com/pinia/2.0.36
     name: pinia
-    version: 2.1.7
+    version: 2.0.36
     peerDependencies:
       '@vue/composition-api': ^1.4.0
       typescript: '>=4.4.4'
-      vue: ^2.6.14 || ^3.3.0
+      vue: ^2.6.14 || ^3.2.0
     peerDependenciesMeta:
       '@vue/composition-api':
         optional: true
@@ -10489,6 +10495,18 @@ packages:
     version: 5.26.5
     requiresBuild: true
 
+  registry.npmmirror.com/uni-mini-router@0.1.5:
+    resolution: {integrity: sha512-pjeKTkiv1ryR7ANLUGJ0YScvOLTYUBqxUSch+PMJPKZnkQYd79Rg4qmEavwDLp9nOZJl9xrAX22b99FpOgZ/Sw==, tarball: https://registry.npmmirror.com/uni-mini-router/-/uni-mini-router-0.1.5.tgz}
+    name: uni-mini-router
+    version: 0.1.5
+    dev: false
+
+  registry.npmmirror.com/uni-parse-pages@0.0.1:
+    resolution: {integrity: sha512-OyuNFo/nCw7mnZnrtTYi/C12uWxmK7FczrxRATZETCh7j23uk1kOxEWVD4BXRSjif7YJg0ZPYQE4xBWqxUMHAw==, tarball: https://registry.npmmirror.com/uni-parse-pages/-/uni-parse-pages-0.0.1.tgz}
+    name: uni-parse-pages
+    version: 0.0.1
+    dev: false
+
   registry.npmmirror.com/unicode-canonical-property-names-ecmascript@2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/unicode-canonical-property-names-ecmascript/-/unicode-canonical-property-names-ecmascript-2.0.0.tgz}
     name: unicode-canonical-property-names-ecmascript
@@ -10669,7 +10687,7 @@ packages:
       fsevents: registry.npmmirror.com/fsevents@2.3.3
 
   registry.npmmirror.com/vue-demi@0.14.6(vue@3.3.8):
-    resolution: {integrity: sha512-8QA7wrYSHKaYgUxDA5ZC24w+eHm3sYCbp0EzcDwKqN3p6HqtTCGR/GVsPyZW92unff4UlcSh++lmqDWN3ZIq4w==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-demi/-/vue-demi-0.14.6.tgz}
+    resolution: {integrity: sha512-8QA7wrYSHKaYgUxDA5ZC24w+eHm3sYCbp0EzcDwKqN3p6HqtTCGR/GVsPyZW92unff4UlcSh++lmqDWN3ZIq4w==, tarball: https://registry.npmmirror.com/vue-demi/-/vue-demi-0.14.6.tgz}
     id: registry.npmmirror.com/vue-demi/0.14.6
     name: vue-demi
     version: 0.14.6
