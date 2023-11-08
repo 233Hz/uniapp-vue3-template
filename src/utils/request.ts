@@ -32,7 +32,9 @@ interface RequestResult<T> {
   msg: string
 }
 
-export const request = <T>(options: UniApp.RequestOptions): Promise<RequestResult<T>> => {
+export const request = <T>(
+  options: UniApp.RequestOptions,
+): Promise<RequestResult<T>> => {
   return new Promise((resolve, reject) => {
     uni.request({
       ...options,

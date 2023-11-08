@@ -6,9 +6,14 @@
     <view>
       <text>测试pinia</text>
       <text style="margin-left: 20rpx">TOKEN:{{ userStore.token }}</text>
-      <button @click="() => userStore.setToken(randomToken())">切换TOKEN</button>
+      <button @click="() => userStore.setToken(randomToken())">
+        切换TOKEN
+      </button>
     </view>
-    <text>测试字体图标 <text style="margin-left: 20rpx; color: pink" class="icon-sousuo" /></text>
+    <text
+      >测试字体图标
+      <text style="margin-left: 20rpx; color: pink" class="icon-sousuo"
+    /></text>
     <text class="test-scss">测试scss</text>
   </view>
 </template>
