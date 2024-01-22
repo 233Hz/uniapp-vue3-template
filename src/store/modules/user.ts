@@ -1,29 +1,47 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
+import pinia from '../index'
 
-export interface UserInfo {
+export interface UserState {
+  token: string
   username: string
   roles: string[]
+  menus: string[]
 }
 
 export const useUserStore = defineStore(
   'user',
   () => {
-    const userInfo = ref<UserInfo>()
-    const setUserInfo = (_userInfo: UserInfo) => {
-      userInfo.value = _userInfo
+    const token = ref<string>()
+    const username = ref<string>()
+    const roles = ref<string[]>()
+    const menus = ref<string[]>()
+    const setToken = (val: string) => {
+      token.value = val
     }
-    const clearUserInfo = () => {
-      userInfo.value = void 0
+    const hasToken = () => {
+      return !!token.value
     }
-    const hasRole = (role: string) => {
-      return userInfo.value && userInfo.value.roles.includes(role)
+    const setUserInfo = (userInfo: Partial<Omit<UserState, 'token'>>) => {
+      username.value = userInfo.username
+      roles.value = userInfo.roles
+      menus.value = userInfo.menus
+    }
+    const clear = () => {
+      token.value = void 0
+      username.value = void 0
+      roles.value = []
+      menus.value = []
     }
     return {
-      userInfo,
+      token,
+      username,
+      roles,
+      menus,
+      setToken,
+      hasToken,
       setUserInfo,
-      clearUserInfo,
-      hasRole
+      clear
     }
   },
   {
@@ -41,3 +59,5 @@ export const useUserStore = defineStore(
     }
   }
 )
+
+export const useUserStoreHook = () => useUserStore(pinia)

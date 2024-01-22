@@ -1,18 +1,16 @@
 import router from './router'
-import { useAuthStore } from './store'
-import { useUserStore } from './store'
+import { useUserStoreHook } from './store'
 
 router.beforeEach((to, from, next) => {
   console.log('beforeEach', to, from)
-  const authStore = useAuthStore()
-  const userStore = useUserStore()
-  if (to && to.name !== 'login' && !authStore.hasToken()) {
+  const userStore = useUserStoreHook()
+  if (to && to.name !== 'login' && !userStore.hasToken()) {
     next({
       name: 'login',
       params: { redirect: to.name!, ...to.query },
       navType: 'replaceAll'
     })
-  } else if (to && to.name === 'login' && authStore.hasToken()) {
+  } else if (to && to.name === 'login' && userStore.hasToken()) {
     next({ name: 'home', navType: 'replaceAll' })
   }
   // @ts-ignore
@@ -25,7 +23,7 @@ router.beforeEach((to, from, next) => {
     //@ts-ignore
     to.meta.roles.length &&
     //@ts-ignore
-    !to.meta.roles.some((item) => userStore.hasRole(item))
+    !to.meta.roles.some((item) => userStore.roles?.includes(item))
   ) {
     next({ name: '404' })
   } else {
@@ -36,12 +34,11 @@ router.beforeEach((to, from, next) => {
 router.afterEach((to) => {
   console.log('afterEach', to)
 
-  const authStore = useAuthStore()
-  const userStore = useUserStore()
+  const userStore = useUserStoreHook()
 
-  if (to && to.name !== 'login' && !authStore.hasToken()) {
+  if (to && to.name !== 'login' && !userStore.hasToken()) {
     router.push({ name: 'login', params: { redirect: to.name!, ...to.query } })
-  } else if (to && to.name === 'login' && authStore.hasToken()) {
+  } else if (to && to.name === 'login' && userStore.hasToken()) {
     router.replaceAll({ name: 'home' })
   }
   // @ts-ignore
@@ -54,7 +51,7 @@ router.afterEach((to) => {
     //@ts-ignore
     to.meta.roles.length &&
     //@ts-ignore
-    !to.meta.roles.some((item) => userStore.hasRole(item))
+    !to.meta.roles.some((item) => userStore.roles?.includes(item))
   ) {
     router.push({ name: '404' })
   }

@@ -2,7 +2,6 @@
   <view class="content">
     <text>uniapp-vue3-template</text>
     <Test />
-    <GlTest />
     <view>
       <text>测试pinia</text>
     </view>
@@ -11,6 +10,11 @@
       <text style="margin-left: 20rpx; color: pink" class="icon-sousuo" />
     </text>
     <text class="test-scss">测试scss</text>
+    <up-input
+      placeholder="前置图标"
+      prefixIcon="search"
+      prefixIconStyle="font-size: 22px;color: #909399"
+    ></up-input>
   </view>
 </template>
 

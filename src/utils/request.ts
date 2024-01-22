@@ -45,7 +45,7 @@ export const request = <T>(
           resolve(res.data as RequestResult<T>)
         } else if (status === 401) {
           const userStore = useUserStore()
-          userStore.clearToken()
+          userStore.clear()
           uni.navigateTo({
             url: '/pages/login/login',
             reLaunch: true

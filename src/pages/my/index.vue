@@ -1,21 +1,19 @@
 <script setup lang="ts">
-import { useAuthStore } from '@/store'
 import { useUserStore } from '@/store'
 import { useRouter } from 'uni-mini-router'
 
 const router = useRouter()
 const userStore = useUserStore()
-const authStore = useAuthStore()
 const simulationLogin = () => {
-  authStore.clearToken()
+  userStore.clear()
 }
 </script>
 
 <template>
   <view>
-    <view>token{{ authStore.token }}</view>
-    <view>用户名：{{ userStore.userInfo?.username }}</view>
-    <view>角色：{{ userStore.userInfo?.roles }}</view>
+    <view>token{{ userStore.token }}</view>
+    <view>用户名：{{ userStore.username }}</view>
+    <view>角色：{{ userStore.roles }}</view>
     <button style="margin-top: 20px" @click="simulationLogin">移除token</button>
     <button
       style="margin-top: 20px"

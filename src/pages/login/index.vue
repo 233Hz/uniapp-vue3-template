@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { useAuthStore } from '@/store'
+import { useUserStore } from '@/store'
 import { useRouter } from 'uni-mini-router'
 
 const router = useRouter()
-const authStore = useAuthStore()
+const userStore = useUserStore()
 const simulationLogin = () => {
-  authStore.setToken(new Date().getTime() + '')
+  userStore.setToken(new Date().getTime() + '')
 }
 </script>
 
 <template>
   <view>
-    <view>token: {{ authStore.token }}</view>
+    <view>token: {{ userStore.token }}</view>
     <button style="margin-top: 20px" @click="simulationLogin">设置token</button>
     <button style="margin-top: 20px" @click="router.pushTab({ name: 'home' })">
       转到首页
