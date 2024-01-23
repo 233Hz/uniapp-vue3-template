@@ -10,11 +10,13 @@
       <text style="margin-left: 20rpx; color: pink" class="icon-sousuo" />
     </text>
     <text class="test-scss">测试scss</text>
-    <up-input
-      placeholder="前置图标"
-      prefixIcon="search"
-      prefixIconStyle="font-size: 22px;color: #909399"
-    ></up-input>
+    <uni-search-bar
+      placeholder="搜索申请记录"
+      bg-color="#ffffff"
+      clearButton="none"
+      cancelButton="none"
+      readonly
+    />
   </view>
 </template>
 

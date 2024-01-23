@@ -44,12 +44,9 @@ dependencies:
   '@dcloudio/uni-quickapp-webview':
     specifier: 3.0.0-3081220230817001
     version: registry.npmmirror.com/@dcloudio/uni-quickapp-webview@3.0.0-3081220230817001(postcss@8.4.31)(vue@3.3.8)
-  clipboard:
-    specifier: ^2.0.11
-    version: registry.npmmirror.com/clipboard@2.0.11
-  dayjs:
-    specifier: ^1.11.10
-    version: registry.npmmirror.com/dayjs@1.11.10
+  '@dcloudio/uni-ui':
+    specifier: ^1.5.0
+    version: registry.npmmirror.com/@dcloudio/uni-ui@1.5.0
   pinia:
     specifier: ^2.0.36
     version: registry.npmmirror.com/pinia@2.0.36(typescript@4.9.5)(vue@3.3.8)
@@ -62,9 +59,6 @@ dependencies:
   uni-parse-pages:
     specifier: ^0.0.1
     version: registry.npmmirror.com/uni-parse-pages@0.0.1
-  uview-plus:
-    specifier: ^3.1.42
-    version: registry.npmmirror.com/uview-plus@3.1.42
   vue:
     specifier: ^3.3.8
     version: registry.npmmirror.com/vue@3.3.8(typescript@4.9.5)
@@ -97,9 +91,6 @@ devDependencies:
   '@rushstack/eslint-patch':
     specifier: ^1.5.1
     version: registry.npmmirror.com/@rushstack/eslint-patch@1.5.1
-  '@ttou/uview-typings':
-    specifier: ^2.0.5
-    version: registry.npmmirror.com/@ttou/uview-typings@2.0.5
   '@types/mockjs':
     specifier: ^1.0.10
     version: registry.npmmirror.com/@types/mockjs@1.0.10
@@ -112,6 +103,9 @@ devDependencies:
   '@uni-helper/uni-app-types':
     specifier: ^0.5.12
     version: registry.npmmirror.com/@uni-helper/uni-app-types@0.5.12(typescript@4.9.5)
+  '@uni-helper/uni-ui-types':
+    specifier: ^0.5.11
+    version: registry.npmmirror.com/@uni-helper/uni-ui-types@0.5.11(@uni-helper/uni-app-types@0.5.12)(typescript@4.9.5)
   '@vue/eslint-config-prettier':
     specifier: ^8.0.0
     version: registry.npmmirror.com/@vue/eslint-config-prettier@8.0.0(eslint@8.53.0)(prettier@3.0.3)
@@ -2484,6 +2478,12 @@ packages:
       - vue
     dev: false
 
+  registry.npmmirror.com/@dcloudio/uni-ui@1.5.0:
+    resolution: {integrity: sha512-E7D37VbRZeh1E2yzrIie8psBckIrErdkUbUA751rlG8zdioGovW3zOuUsKgY+Gh7csMvi6XMEoSacvboe8o4Gw==, tarball: https://registry.npmmirror.com/@dcloudio/uni-ui/-/uni-ui-1.5.0.tgz}
+    name: '@dcloudio/uni-ui'
+    version: 1.5.0
+    dev: false
+
   registry.npmmirror.com/@dcloudio/vite-plugin-uni@3.0.0-3081220230817001(postcss@8.4.31)(vite@4.1.4)(vue@3.3.8):
     resolution: {integrity: sha512-dLeqqyrNNUBTZfI0ppPk4YoD+DBI0gJLeTjpN6bK5i3nFKkju9g2K6IWl62YMObjTiXwQF8qAEDb+fyWoe4Ksw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@dcloudio/vite-plugin-uni/-/vite-plugin-uni-3.0.0-3081220230817001.tgz}
     id: registry.npmmirror.com/@dcloudio/vite-plugin-uni/3.0.0-3081220230817001
@@ -3975,13 +3975,6 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  registry.npmmirror.com/@ttou/uview-typings@2.0.5:
-    resolution: {integrity: sha512-yyxEWWFcgKcEWkWB/riCXInjQs8gMKRBtaWarFyOZfvCmnEYSjqdtUppINpvRNbdJsV2kxNDeH8PsJ8FBovHBg==, tarball: https://registry.npmmirror.com/@ttou/uview-typings/-/uview-typings-2.0.5.tgz}
-    name: '@ttou/uview-typings'
-    version: 2.0.5
-    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
-    dev: true
-
   registry.npmmirror.com/@types/babel__core@7.20.4:
     resolution: {integrity: sha512-mLnSC22IC4vcWiuObSRjrLd9XcBTGf59vUSoq2jkQDJ/QQ8PMI9rSuzE+aEV8karUMbskw07bKYoUJCKTUaygg==, tarball: https://registry.npmmirror.com/@types/babel__core/-/babel__core-7.20.4.tgz}
     name: '@types/babel__core'
@@ -4291,6 +4284,25 @@ packages:
       '@dcloudio/types': registry.npmmirror.com/@dcloudio/types@3.4.3
       typescript: registry.npmmirror.com/typescript@4.9.5
       vue3: registry.npmmirror.com/vue@3.3.8(typescript@4.9.5)
+    dev: true
+
+  registry.npmmirror.com/@uni-helper/uni-ui-types@0.5.11(@uni-helper/uni-app-types@0.5.12)(typescript@4.9.5):
+    resolution: {integrity: sha512-tGX4llyJBdq9TmNjmZYKu4eueUWUU0F/YgZeTWDgVCmlgYGavhcUL7R+I0Uxe5hGoqFXkNf0ZnmG/WFZWfK/HQ==, tarball: https://registry.npmmirror.com/@uni-helper/uni-ui-types/-/uni-ui-types-0.5.11.tgz}
+    id: registry.npmmirror.com/@uni-helper/uni-ui-types/0.5.11
+    name: '@uni-helper/uni-ui-types'
+    version: 0.5.11
+    engines: {node: '>=14.18'}
+    peerDependencies:
+      '@uni-helper/uni-app-types': ^0.5.1
+    peerDependenciesMeta:
+      '@uni-helper/uni-app-types':
+        optional: true
+    dependencies:
+      '@dcloudio/types': registry.npmmirror.com/@dcloudio/types@3.4.3
+      '@uni-helper/uni-app-types': registry.npmmirror.com/@uni-helper/uni-app-types@0.5.12(typescript@4.9.5)
+      vue3: registry.npmmirror.com/vue@3.3.8(typescript@4.9.5)
+    transitivePeerDependencies:
+      - typescript
     dev: true
 
   registry.npmmirror.com/@vitejs/plugin-legacy@4.1.1(terser@5.24.0)(vite@4.1.4):
@@ -5421,16 +5433,6 @@ packages:
     engines: {node: '>= 10'}
     dev: true
 
-  registry.npmmirror.com/clipboard@2.0.11:
-    resolution: {integrity: sha512-C+0bbOqkezLIsmWSvlsXS0Q0bmkugu7jcfMIACB+RDEntIzQIkdr148we28AfSloQLRdZlYL/QYyrq05j/3Faw==, tarball: https://registry.npmmirror.com/clipboard/-/clipboard-2.0.11.tgz}
-    name: clipboard
-    version: 2.0.11
-    dependencies:
-      good-listener: registry.npmmirror.com/good-listener@1.2.2
-      select: registry.npmmirror.com/select@1.1.2
-      tiny-emitter: registry.npmmirror.com/tiny-emitter@2.1.0
-    dev: false
-
   registry.npmmirror.com/cliui@7.0.4:
     resolution: {integrity: sha512-OcRE68cOsVMXp1Yvonl/fzkQOyjLSu/8bhPDfQt0e0/Eb283TKP20Fs2MqoPsr9SwA595rRCA+QMzYc9nBP+JQ==, tarball: https://registry.npmmirror.com/cliui/-/cliui-7.0.4.tgz}
     name: cliui
@@ -5848,12 +5850,6 @@ packages:
       whatwg-url: registry.npmmirror.com/whatwg-url@8.7.0
     dev: true
 
-  registry.npmmirror.com/dayjs@1.11.10:
-    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==, tarball: https://registry.npmmirror.com/dayjs/-/dayjs-1.11.10.tgz}
-    name: dayjs
-    version: 1.11.10
-    dev: false
-
   registry.npmmirror.com/de-indent@1.0.2:
     resolution: {integrity: sha512-e/1zu3xH5MQryN2zdVaF0OrdNLUbvWxzMbi+iNA6Bky7l1RoP8a2fIbRocyHclXt/arDrrR6lL3TqFD9pMQTsg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/de-indent/-/de-indent-1.0.2.tgz}
     name: de-indent
@@ -5991,12 +5987,6 @@ packages:
     version: 1.0.0
     engines: {node: '>=0.4.0'}
     dev: true
-
-  registry.npmmirror.com/delegate@3.2.0:
-    resolution: {integrity: sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==, tarball: https://registry.npmmirror.com/delegate/-/delegate-3.2.0.tgz}
-    name: delegate
-    version: 3.2.0
-    dev: false
 
   registry.npmmirror.com/depd@2.0.0:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/depd/-/depd-2.0.0.tgz}
@@ -7045,14 +7035,6 @@ packages:
       merge2: registry.npmmirror.com/merge2@1.4.1
       slash: registry.npmmirror.com/slash@3.0.0
     dev: true
-
-  registry.npmmirror.com/good-listener@1.2.2:
-    resolution: {integrity: sha512-goW1b+d9q/HIwbVYZzZ6SsTr4IgE+WA44A0GmPIQstuOrgsFcT7VEJ48nmr9GaRtNu0XTKacFLGnBPAM6Afouw==, tarball: https://registry.npmmirror.com/good-listener/-/good-listener-1.2.2.tgz}
-    name: good-listener
-    version: 1.2.2
-    dependencies:
-      delegate: registry.npmmirror.com/delegate@3.2.0
-    dev: false
 
   registry.npmmirror.com/gopd@1.0.1:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/gopd/-/gopd-1.0.1.tgz}
@@ -9972,12 +9954,6 @@ packages:
       xmlchars: registry.npmmirror.com/xmlchars@2.2.0
     dev: true
 
-  registry.npmmirror.com/select@1.1.2:
-    resolution: {integrity: sha512-OwpTSOfy6xSs1+pwcNrv0RBMOzI39Lp3qQKUTPVVPRjCdNa5JH/oPRiqsesIskK8TVgmRiHwO4KXlV2Li9dANA==, tarball: https://registry.npmmirror.com/select/-/select-1.1.2.tgz}
-    name: select
-    version: 1.1.2
-    dev: false
-
   registry.npmmirror.com/semver@5.7.2:
     resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==, tarball: https://registry.npmmirror.com/semver/-/semver-5.7.2.tgz}
     name: semver
@@ -10480,12 +10456,6 @@ packages:
     version: 1.7.1
     dev: false
 
-  registry.npmmirror.com/tiny-emitter@2.1.0:
-    resolution: {integrity: sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==, tarball: https://registry.npmmirror.com/tiny-emitter/-/tiny-emitter-2.1.0.tgz}
-    name: tiny-emitter
-    version: 2.1.0
-    dev: false
-
   registry.npmmirror.com/tinycolor2@1.6.0:
     resolution: {integrity: sha512-XPaBkWQJdsf3pLKJV9p4qN/S+fm2Oj8AIPo1BTUhg5oxkvm9+SVEGFdhyOz7tTdUTfvxMiAs4sp6/eZO2Ew+pw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tinycolor2/-/tinycolor2-1.6.0.tgz}
     name: tinycolor2
@@ -10795,16 +10765,6 @@ packages:
     version: 1.0.1
     engines: {node: '>= 0.4.0'}
     dev: true
-
-  registry.npmmirror.com/uview-plus@3.1.42:
-    resolution: {integrity: sha512-CX9DiviNfUAaN1PinnnwYcXvoDu/6qghTyHv1C6bmzdFJ7/poDxHbvJOJ2jLLLqFV6fSXu3+eYxCquj5DCCksQ==, tarball: https://registry.npmmirror.com/uview-plus/-/uview-plus-3.1.42.tgz}
-    name: uview-plus
-    version: 3.1.42
-    engines: {HBuilderX: ^3.1.0}
-    dependencies:
-      clipboard: registry.npmmirror.com/clipboard@2.0.11
-      dayjs: registry.npmmirror.com/dayjs@1.11.10
-    dev: false
 
   registry.npmmirror.com/v8-to-istanbul@8.1.1:
     resolution: {integrity: sha512-FGtKtv3xIpR6BYhvgH8MI/y78oT7d8Au3ww4QIxymrCtZEh5b8gCw2siywE+puhEmuWKDtmfrvF5UlB298ut3w==, tarball: https://registry.npmmirror.com/v8-to-istanbul/-/v8-to-istanbul-8.1.1.tgz}
