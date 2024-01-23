@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv } from 'vite'
 import path from 'path'
 import uni from '@dcloudio/vite-plugin-uni'
+import WindiCSS from 'vite-plugin-windicss'
 import { viteMockServe } from 'vite-plugin-mock'
 
 // https://vitejs.dev/config/
@@ -10,6 +11,7 @@ export default defineConfig(({ mode }) => {
     base: env.VITE_APP_BASE,
     plugins: [
       uni(),
+      WindiCSS(),
       viteMockServe({
         enable: env.VITE_NODE_ENV === 'mock',
         ignore: (fileName) => !fileName.startsWith('ignore')
